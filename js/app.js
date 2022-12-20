@@ -40,6 +40,9 @@ btn.addEventListener('click', function func(e) {
     if (mail.length < 9) {
         document.querySelector('.valid-mail').innerHTML = 'Email no`tog`ri kiritilgan'
         document.querySelector('.mail').style = 'box-shadow: 1px 3px 17px 13px rgba(255, 0, 0, 0.2);'
+    } else if (mail !== "@") {
+        document.querySelector('.valid-mail').innerHTML = 'Email no`tog`ri kiritilgan'
+        document.querySelector('.mail').style = 'box-shadow: 1px 3px 17px 13px rgba(255, 0, 0, 0.2);'
     } else {
         document.querySelector('.valid-mail').innerHTML = ''
         document.querySelector('.mail').style = 'box-shadow: 1px 3px 17px 13px rgba(49, 255, 0, 0.2);'
@@ -48,6 +51,9 @@ btn.addEventListener('click', function func(e) {
     if (password1.length < 8) {
         document.querySelector('.valid-pass1').innerHTML = 'Parol 8 tadan ko`p bo`lishi kerak'
         document.querySelector('.password1').style = 'box-shadow: 1px 3px 17px 13px rgba(255, 0, 0, 0.2);'
+    } else if (password1 == password2) {
+        document.querySelector('.valid-pass2').innerHTML = ''
+        document.querySelector('.password2').style = 'box-shadow: 1px 3px 17px 13px rgba(49, 255, 0, 0.2);'
     } else {
         document.querySelector('.valid-pass1').innerHTML = ''
         document.querySelector('.password1').style = 'box-shadow: 1px 3px 17px 13px rgba(49, 255, 0, 0.2);'
@@ -59,9 +65,5 @@ btn.addEventListener('click', function func(e) {
     if (password1 !== password2) {
         document.querySelector('.valid-pass2').innerHTML = 'Parol bir hilda emas!'
         document.querySelector('.password2').style = 'box-shadow: 1px 3px 17px 13px rgba(255, 0, 0, 0.2);'
-    } else if (password1 == password2) {
-        document.querySelector('.valid-pass2').innerHTML = ''
-        document.querySelector('.password2').style = 'box-shadow: 1px 3px 17px 13px rgba(49, 255, 0, 0.2);'
     }
-    // console.log(password1);
 })
