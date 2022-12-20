@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    background-image: url(../image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: rgb(104, 104, 104);
+}
+
+input {
+    width: 300px;
+    height: 35px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.password {
+    position: relative;
+}
+
+ion-icon {
+    position: absolute;
+    cursor: pointer;
+    font-size: 25px;
+    right: 15px;
+    top: 7px;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    background-color: rgb(51, 122, 255);
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(56, 56, 255)
+}
+
+p {
+    color: red;
+    font-size: 18px;
+    height: 15px;
+    margin-top: 5px;
+}
