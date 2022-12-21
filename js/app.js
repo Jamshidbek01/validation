@@ -40,7 +40,17 @@ btn.addEventListener('click', function func(e) {
     if (mail.length < 9) {
         document.querySelector('.valid-mail').innerHTML = 'Email no`tog`ri kiritilgan'
         document.querySelector('.mail').style = 'box-shadow: 1px 3px 17px 13px rgba(255, 0, 0, 0.2);'
-    } else {
+    } else if (!mail.includes('@')) {
+        document.querySelector('.valid-mail').innerHTML = 'Email no`tog`ri kiritilgan'
+        document.querySelector('.mail').style = 'box-shadow: 1px 3px 17px 13px rgba(255, 0, 0, 0.2);'
+    } else if (!mail.includes('.com') && !mail.includes('.ru')) {
+        document.querySelector('.valid-mail').innerHTML = 'Email no`tog`ri kiritilgan'
+        document.querySelector('.mail').style = 'box-shadow: 1px 3px 17px 13px rgba(255, 0, 0, 0.2);'
+    } else if (!mail.includes('gmail') && !mail.includes('mail')) {
+        document.querySelector('.valid-mail').innerHTML = 'Email no`tog`ri kiritilgan'
+        document.querySelector('.mail').style = 'box-shadow: 1px 3px 17px 13px rgba(255, 0, 0, 0.2);'
+    }
+    else {
         document.querySelector('.valid-mail').innerHTML = ''
         document.querySelector('.mail').style = 'box-shadow: 1px 3px 17px 13px rgba(49, 255, 0, 0.2);'
     }
